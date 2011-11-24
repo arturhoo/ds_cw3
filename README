@@ -32,5 +32,5 @@ containing the current temperature for that zip in Celsius unit,
 
 The basic functionality of this program is retrieve the current temperature
 of a US ZIP code in Fahrenheit units and then use this temperature with
-another web service that converts Fehrenheit to Celsius to display the
+another web service that converts Fahrenheit to Celsius to display the
 ZIP's temperature.
