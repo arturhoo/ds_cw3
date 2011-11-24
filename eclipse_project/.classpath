@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="/home/cserv2_a/soc_ug/sc11aor/dist/cw3/ws2_celsius/ws2_stub.jar"/>
+	<classpathentry kind="lib" path="/home/cserv2_a/soc_ug/sc11aor/dist/cw3/ws1_weather/ws1_stub.jar"/>
+	<classpathentry kind="lib" path="/home/cserv2_a/soc_ug/sc11aor/workspace/cw3/libs/activation-1.1-osgi.jar"/>
+	<classpathentry kind="lib" path="/home/cserv2_a/soc_ug/sc11aor/workspace/cw3/libs/axis.jar"/>
+	<classpathentry kind="lib" path="/home/cserv2_a/soc_ug/sc11aor/workspace/cw3/libs/jakarta-commons-discovery-0.4.jar"/>
+	<classpathentry kind="lib" path="/home/cserv2_a/soc_ug/sc11aor/workspace/cw3/libs/jakarta-commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="/home/cserv2_a/soc_ug/sc11aor/workspace/cw3/libs/jakarta-commons-logging-api-1.0.4.jar"/>
+	<classpathentry kind="lib" path="/home/cserv2_a/soc_ug/sc11aor/workspace/cw3/libs/javaee.jar"/>
+	<classpathentry kind="lib" path="/home/cserv2_a/soc_ug/sc11aor/workspace/cw3/libs/jaxrpc-1.2.1.jar"/>
+	<classpathentry kind="lib" path="/home/cserv2_a/soc_ug/sc11aor/workspace/cw3/libs/log4j-1.2.14.jar"/>
+	<classpathentry kind="lib" path="/home/cserv2_a/soc_ug/sc11aor/workspace/cw3/libs/mail.jar"/>
+	<classpathentry kind="lib" path="/home/cserv2_a/soc_ug/sc11aor/workspace/cw3/libs/saaj-1.2.1.jar"/>
+	<classpathentry kind="lib" path="/home/cserv2_a/soc_ug/sc11aor/workspace/cw3/libs/ws-commons-util-1.0.1.jar"/>
+	<classpathentry kind="lib" path="/home/cserv2_a/soc_ug/sc11aor/workspace/cw3/libs/wsdl4j-1.5.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
