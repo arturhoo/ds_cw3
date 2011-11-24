@@ -1,0 +1,161 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from Weather WSDL service -->
+
+  <service name="WeatherSoap12" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://ws.cdyne.com/WeatherWS/"/>
+      <parameter name="wsdlServiceElement" value="Weather"/>
+      <parameter name="schemaQualified" value="http://ws.cdyne.com/WeatherWS/"/>
+      <parameter name="wsdlServicePort" value="WeatherSoap12"/>
+      <parameter name="className" value="com.cdyne.ws.WeatherWS.WeatherSoap12Skeleton"/>
+      <parameter name="wsdlPortType" value="WeatherSoap"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <parameter name="allowedMethods" value="*"/>
+
+      <arrayMapping
+        xmlns:ns="http://ws.cdyne.com/WeatherWS/"
+        qname="ns:ArrayOfForecast"
+        type="java:com.cdyne.ws.WeatherWS.Forecast[]"
+        innerType="cmp-ns:Forecast" xmlns:cmp-ns="http://ws.cdyne.com/WeatherWS/"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ws.cdyne.com/WeatherWS/"
+        qname="ns:Forecast"
+        type="java:com.cdyne.ws.WeatherWS.Forecast"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ws.cdyne.com/WeatherWS/"
+        qname="ns:temp"
+        type="java:com.cdyne.ws.WeatherWS.Temp"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ws.cdyne.com/WeatherWS/"
+        qname="ns:WeatherReturn"
+        type="java:com.cdyne.ws.WeatherWS.WeatherReturn"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <arrayMapping
+        xmlns:ns="http://ws.cdyne.com/WeatherWS/"
+        qname="ns:ArrayOfWeatherDescription"
+        type="java:com.cdyne.ws.WeatherWS.WeatherDescription[]"
+        innerType="cmp-ns:WeatherDescription" xmlns:cmp-ns="http://ws.cdyne.com/WeatherWS/"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ws.cdyne.com/WeatherWS/"
+        qname="ns:ForecastReturn"
+        type="java:com.cdyne.ws.WeatherWS.ForecastReturn"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ws.cdyne.com/WeatherWS/"
+        qname="ns:POP"
+        type="java:com.cdyne.ws.WeatherWS.POP"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ws.cdyne.com/WeatherWS/"
+        qname="ns:WeatherDescription"
+        type="java:com.cdyne.ws.WeatherWS.WeatherDescription"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+  <service name="WeatherSoap" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://ws.cdyne.com/WeatherWS/"/>
+      <parameter name="wsdlServiceElement" value="Weather"/>
+      <parameter name="schemaQualified" value="http://ws.cdyne.com/WeatherWS/"/>
+      <parameter name="wsdlServicePort" value="WeatherSoap"/>
+      <parameter name="className" value="com.cdyne.ws.WeatherWS.WeatherSoapSkeleton"/>
+      <parameter name="wsdlPortType" value="WeatherSoap"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <parameter name="allowedMethods" value="*"/>
+
+      <arrayMapping
+        xmlns:ns="http://ws.cdyne.com/WeatherWS/"
+        qname="ns:ArrayOfForecast"
+        type="java:com.cdyne.ws.WeatherWS.Forecast[]"
+        innerType="cmp-ns:Forecast" xmlns:cmp-ns="http://ws.cdyne.com/WeatherWS/"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ws.cdyne.com/WeatherWS/"
+        qname="ns:Forecast"
+        type="java:com.cdyne.ws.WeatherWS.Forecast"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ws.cdyne.com/WeatherWS/"
+        qname="ns:temp"
+        type="java:com.cdyne.ws.WeatherWS.Temp"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ws.cdyne.com/WeatherWS/"
+        qname="ns:WeatherReturn"
+        type="java:com.cdyne.ws.WeatherWS.WeatherReturn"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <arrayMapping
+        xmlns:ns="http://ws.cdyne.com/WeatherWS/"
+        qname="ns:ArrayOfWeatherDescription"
+        type="java:com.cdyne.ws.WeatherWS.WeatherDescription[]"
+        innerType="cmp-ns:WeatherDescription" xmlns:cmp-ns="http://ws.cdyne.com/WeatherWS/"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ws.cdyne.com/WeatherWS/"
+        qname="ns:ForecastReturn"
+        type="java:com.cdyne.ws.WeatherWS.ForecastReturn"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ws.cdyne.com/WeatherWS/"
+        qname="ns:POP"
+        type="java:com.cdyne.ws.WeatherWS.POP"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ws.cdyne.com/WeatherWS/"
+        qname="ns:WeatherDescription"
+        type="java:com.cdyne.ws.WeatherWS.WeatherDescription"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

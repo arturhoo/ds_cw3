@@ -1,0 +1,2 @@
+#!/bin/sh
+java org.apache.axis.wsdl.WSDL2Java -s -S true $*
