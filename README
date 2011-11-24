@@ -4,6 +4,33 @@ School of Computing
 Coursework 3
 
 Artur Oliveira Rodrigues
-2011-11-16
+2011-11-24
 
 This package contains the source code for multiple exercises of Coursework 3.
+
+Here is a brief description of each folder:
+
+- eclipse_project/: folder containing the eclipse project
+|- bin/: binaries for the implementation
+|- libs/: libraries necessary for the project
+|- src/: source code for the implementation
+- ws1_weather/: stub for the first web service
+- ws2_celsius/: stub for the second web service
+
+
+This coursework was developed using the Eclipse IDE.
+
+All the libraries necessary for the correct run of the program are located
+in the folder eclipse/libs/.
+
+To use the program please import the eclipse_project/ folder into eclipse
+It is also needed to set up the argument for the program, this being an
+US valid ZIP, such as New York City's 10153.
+
+A file will be created, named <result.html> which is a static HTML page
+containing the current temperature for that zip in Celsius unit,
+
+The basic functionality of this program is retrieve the current temperature
+of a US ZIP code in Fahrenheit units and then use this temperature with
+another web service that converts Fehrenheit to Celsius to display the
+ZIP's temperature.
