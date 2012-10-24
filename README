@@ -20,8 +20,8 @@ Here is a brief description of each folder:
 
 This coursework was developed using the Eclipse IDE.
 
-All the libraries necessary for the correct run of the program are located
-in the folder eclipse/libs/.
+All the libraries necessary for the correct execution of the program are 
+located in the folder eclipse/libs/.
 
 To use the program please import the eclipse_project/ folder into eclipse
 It is also needed to set up the argument for the program, this being an
